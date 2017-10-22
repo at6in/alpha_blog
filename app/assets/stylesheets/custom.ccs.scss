@@ -36,7 +36,25 @@
     font-size: 1.7em;
     background-color: black;
 }
+.article-actions {
+    border-top: 1px solid #eaeaea;
+    padding-top: 5px;
+}
 
+.description {
+    margin-top: 0;
+}
+
+.article-title {
+     font-weight: bold;
+    font-size: 1.5 em;
+}
+
+.article-body {
+   border-top: 1px solid #eaeaea;
+   padding-top: 15px;
+   padding-bottom: 15pxS;
+}
 .footer {
     margin-top: 45px;
     padding-top: 5px;
