@@ -4,7 +4,7 @@ class UsersController < ApplicationController
        @user = User.new 
     end
     
-    def create
+     def create
         @user = User.new(user_params)
         if @user.save
           flash[:success] = "welcome to the alpha blog #{@user.username}"
@@ -13,19 +13,11 @@ class UsersController < ApplicationController
             render 'new'
         end
         
-    end
-    
-    private 
-    
-        def user_params
-            params.require(:user).permit(:username, :email, :password)
-        end
-        def edit
-
-            @user = User.find(params[:id])
-
-        end
-
+     def show
+        @user = User.find(params[:id])
+        
+     end
+        
         def update
 
             @user = User.find(params[:id])
@@ -43,5 +35,17 @@ class UsersController < ApplicationController
         end
 
     end
+    end
     
-end
+    private 
+    
+        def user_params
+            params.require(:user).permit(:username, :email, :password)
+        end
+        def edit
+
+            @user = User.find(params[:id])
+
+        end
+
+    end
