@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   root 'pages#home'
   get 'about', to: 'pages#about'
-  
+  get 'edit', to: 'users#editusers/edit(.:format)'
+
   resources :articles
   
   get 'signup', to: 'users#new'
